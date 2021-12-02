@@ -33,9 +33,9 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: center;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     margin-bottom: calc(var(--footer-height));
 }
 
@@ -61,7 +61,6 @@ header {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -78,7 +77,15 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
+main {
+    height: 800px;
+    width: auto;
+    background-image: url(../assets/bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +95,8 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+label {
+    margin: 100px 100px;
 }
