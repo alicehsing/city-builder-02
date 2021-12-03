@@ -14,58 +14,50 @@
 
 <body>
     <main>
-        <label>Skyline &nbsp
+        <div class="dropdown-selection">
+        <label>Skyline &nbsp &nbsp
             <select id="skyline-dropdown">
                 <option value="1">Singapore</option>
                 <option value="2">Brooklyn</option>
-                <option value="3">Night City</option>
+                <option value="3">Kuala Lumpur</option>
             </select>
         </label>
-        <label>Waterfront &nbsp
+        <label>Waterfront &nbsp &nbsp
             <select id="waterfront-dropdown">
                 <option value="1">Riverfront</option>
                 <option value="2">Canal</option>
                 <option value="3">River Valley</option>
             </select>
         </label>
-        <label>Castle &nbsp
+        <label>Castle &nbsp &nbsp
             <select id="castle-dropdown">
                 <option value="1">Grand Castle</option>
                 <option value="2">Sunset Castle</option>
                 <option value="3">Misty Castle</option>
             </select>
         </label>
-
+        </div>
+    <div class="image-box">
         <div class="skyline">
-            <img id="skyline-image" />;
+            <img id="skyline-image" />
         </div>
 
         <div class="waterfront">
-            <img id="waterfront-image" />;
+            <img id="waterfront-image" />
         </div>
 
         <div class="castle">
-            <img id="castle-image" />;
+            <img id="castle-image" />
         </div>
-
-
+    </div> 
+    <div class="count"></div>
+    <div class="slogan-box">
         <div class="slogans">
-            <label> Type In Your Slogan
-                <input id="slogan-input" type="text">
-            </label>
+            <input id="slogan-input" placeholder="Enter Your City's Slogan">
             <button id="slogan-button">Add Slogan</button>
-            <div class="list"></div>
         </div>
-
-        <div class="count"> </div>
-
-
-
-
-
-
-
-
+        <div class="list" style="overflow-y:scroll"></div>
+    </div>  
 
     </main>
     <footer>
