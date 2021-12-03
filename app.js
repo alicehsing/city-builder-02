@@ -8,6 +8,10 @@ const skylineImageEl = document.querySelector('#skyline-image');
 const waterfrontImageEl = document.querySelector('#waterfront-image');
 const castleImageEl = document.querySelector('#castle-image');
 
+const cityInputEl = document.querySelector('#city-input');
+const cityButton = document.querySelector('#city-button');
+const cityListEl = document.querySelector('.my-city');
+
 const sloganInputEl = document.querySelector('#slogan-input');
 const sloganButton = document.querySelector('#slogan-button');
 const sloganListEl = document.querySelector('.list');
@@ -57,6 +61,11 @@ sloganButton.addEventListener('click', () => {
 
 });
 
+cityButton.addEventListener('click', () => {
+    const newCityInput = cityInputEl.value;
+    cityListEl.textContent = newCityInput;
+    cityInputEl.value = '';
+});
 // Two impure functions displayStats() and displaySlogans()
 function displayStats() {
     countEl.textContent = makeStatsString(skylineCount, waterfrontCount, castleCount);
