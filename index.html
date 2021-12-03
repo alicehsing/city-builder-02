@@ -9,59 +9,56 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>City Builder</title>
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+        <div class="dropdown-selection">
+        <label>Skyline &nbsp &nbsp
+            <select id="skyline-dropdown">
+                <option value="1">Singapore</option>
+                <option value="2">Brooklyn</option>
+                <option value="3">Kuala Lumpur</option>
+            </select>
+        </label>
+        <label>Waterfront &nbsp &nbsp
+            <select id="waterfront-dropdown">
+                <option value="1">Riverfront</option>
+                <option value="2">Canal</option>
+                <option value="3">River Valley</option>
+            </select>
+        </label>
+        <label>Castle &nbsp &nbsp
+            <select id="castle-dropdown">
+                <option value="1">Grand Castle</option>
+                <option value="2">Sunset Castle</option>
+                <option value="3">Misty Castle</option>
+            </select>
+        </label>
+        </div>
+    <div class="image-box">
+        <div class="skyline">
+            <img id="skyline-image" />
+        </div>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+        <div class="waterfront">
+            <img id="waterfront-image" />
+        </div>
 
-        </section>
+        <div class="castle">
+            <img id="castle-image" />
+        </div>
+    </div> 
+    <div class="count"></div>
+    <div class="slogan-box">
+        <div class="slogans">
+            <input id="slogan-input" placeholder="Enter Your City's Slogan">
+            <button id="slogan-button">Add Slogan</button>
+        </div>
+        <div class="list" style="overflow-y:scroll"></div>
+    </div>  
+
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
