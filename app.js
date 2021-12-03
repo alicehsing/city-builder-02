@@ -51,11 +51,13 @@ castleDropdown.addEventListener('change', () => {
 
 sloganButton.addEventListener('click', () => {
     // get the value of the slogan input
-    const newInput = sloganInputEl.value;
+    const newInput = cityInputEl.value + ":" + " " + sloganInputEl.value;
     // push the new slogan to the sloganInput array in state
     sloganInput.push(newInput);
     // clear out the form input's value so it's empty to the user
     sloganInputEl.value = '';
+    cityInputEl.value = '';
+
     // update the dom to show the new slogan by calling a function
     displaySlogans();
 
@@ -64,8 +66,10 @@ sloganButton.addEventListener('click', () => {
 cityButton.addEventListener('click', () => {
     const newCityInput = cityInputEl.value;
     cityListEl.textContent = newCityInput;
-    cityInputEl.value = '';
 });
+
+
+
 // Two impure functions displayStats() and displaySlogans()
 function displayStats() {
     countEl.textContent = makeStatsString(skylineCount, waterfrontCount, castleCount);
@@ -83,5 +87,7 @@ function displaySlogans() {
         p.classList.add('slogan');     
         sloganListEl.append(p);
         p.textContent = slogan;
+    
     }
+
 }
