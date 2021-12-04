@@ -1,25 +1,33 @@
 // import functions and grab DOM elements
 import { makeStatsString } from './utils.js';
+
 const skylineDropdown = document.querySelector('#skyline-dropdown');
 const waterfrontDropdown = document.querySelector('#waterfront-dropdown');
 const castleDropdown = document.querySelector('#castle-dropdown');
+const citySoundDropdown = document.querySelector('#city-sound-dropdown');
 
 const skylineImageEl = document.querySelector('#skyline-image');
 const waterfrontImageEl = document.querySelector('#waterfront-image');
 const castleImageEl = document.querySelector('#castle-image');
 
+const cityInputEl = document.querySelector('#city-input');
+const cityButton = document.querySelector('#city-button');
+const cityListEl = document.querySelector('.my-city');
+
 const sloganInputEl = document.querySelector('#slogan-input');
 const sloganButton = document.querySelector('#slogan-button');
 const sloganListEl = document.querySelector('.list');
-const countEl = document.querySelector('.count'); 
+const countEl = document.querySelector('.count');
 
 // let state
 let skylineCount = 0;
 let waterfrontCount = 0;
 let castleCount = 0;
+
 // set state for all of the slogan inputs
 let sloganInput = [];
-// set event listeners 
+
+// set event listeners for 3 Drop-downs
 skylineDropdown.addEventListener('change', () => {
     // get the value from the dropdown element
     const id = skylineDropdown.value;
@@ -46,15 +54,27 @@ castleDropdown.addEventListener('change', () => {
 });
 
 sloganButton.addEventListener('click', () => {
-    // get the value of the slogan input
-    const newInput = sloganInputEl.value;
+    // get the value of the slogan input + (stretch goal: concatenate city name before slogan)
+    const newInput = cityInputEl.value + ':' + ' ' + sloganInputEl.value;
     // push the new slogan to the sloganInput array in state
     sloganInput.push(newInput);
     // clear out the form input's value so it's empty to the user
     sloganInputEl.value = '';
+    cityInputEl.value = '';
     // update the dom to show the new slogan by calling a function
     displaySlogans();
+});
 
+cityButton.addEventListener('click', () => {
+    const newCityInput = cityInputEl.value;
+    cityListEl.textContent = newCityInput;
+});
+
+//Stretch Goal: add a selectable background noise
+citySoundDropdown.addEventListener('change', () => {
+    const id = citySoundDropdown.value;
+    const selectedSound = document.getElementById(id);
+    selectedSound.play();
 });
 
 // Two impure functions displayStats() and displaySlogans()
